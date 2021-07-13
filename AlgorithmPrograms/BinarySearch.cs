@@ -20,7 +20,7 @@ namespace AlgorithmPrograms
 
             while (start <= end)
             {
-                mid = start + (end-start) / 2;
+                mid = (start + end) / 2;
                 int result = word.CompareTo(list[mid]);
                 if (result == 0)
                 {

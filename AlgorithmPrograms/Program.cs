@@ -7,7 +7,9 @@ namespace AlgorithmPrograms
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Algorithm Programs");
-            BinarySearch.SearchWord();
+            //BinarySearch.SearchWord();
+            InsertionSort sort = new InsertionSort();
+            sort.InputArray();
         }
     }
 }
