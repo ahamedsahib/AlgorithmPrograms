@@ -11,6 +11,7 @@ namespace AlgorithmPrograms
             //InsertionSort.InputArray();
             //BubbleSort.InputArray();
             MergeSort.InputArray();
+            Anagram.InputString();
         }
     }
 }
