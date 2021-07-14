@@ -3,7 +3,7 @@ namespace AlgorithmPrograms
 {
     public class InsertionSort
     {
-        public void InputArray()
+        public static void InputArray()
         {
 
             int[] arr = { 12,1,26,4,3,13, 5, 6 };
@@ -14,7 +14,7 @@ namespace AlgorithmPrograms
             PrintArray(arr);
 
         }
-        void sort(int[] arr)
+        static void sort(int[] arr)
         {
             for (int i = 1; i < arr.Length; i++)
             {
@@ -29,7 +29,7 @@ namespace AlgorithmPrograms
                 arr[j + 1] = key;
             }
         }
-         public void PrintArray(int[] array)
+         public static void PrintArray(int[] array)
          {
             foreach(int i in array)
             {
