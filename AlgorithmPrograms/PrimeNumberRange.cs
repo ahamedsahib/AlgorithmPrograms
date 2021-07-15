@@ -1,19 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace AlgorithmPrograms
 {
     public class PrimeNumberRange
     {
-        public static void ReadInput()
+        public static List<int> FindPrimeNumber()
         {
-            Console.WriteLine("Enter the start range:");
+            List<int> primeNumbers = new List<int>();
+
+            Console.WriteLine("Enter Range to Find Prime Number between them");
+            Console.WriteLine("Enter the Start Number:");
             int start = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the end range:");
+            Console.WriteLine("Enter the End Number:");
             int end = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"\nPrime numbers between {start} and {end} are :");
-            FindPrime(start, end);
-        }
-        public static void FindPrime(int start,int end)
-        {
+        
             int flag;
             for (int i = start; i <= end; i++)
             {
@@ -35,7 +37,19 @@ namespace AlgorithmPrograms
 
                 // flag = 1 means i is prime
                 if (flag == 1)
-                    Console.WriteLine(i);
+                {
+                    primeNumbers.Add(i);
+                }
+                    
+            }
+            Display(primeNumbers);
+            return primeNumbers;
+        }
+        public static void Display(List<int> primeNumber)
+        {
+            foreach(int i in primeNumber)
+            {
+                Console.WriteLine(i);
             }
         }
     }

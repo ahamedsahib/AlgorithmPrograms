@@ -20,7 +20,7 @@ namespace AlgorithmPrograms
             }
         }
 
-        private static void FindAnagram(string str1, string str2)
+        public static string FindAnagram(string str1, string str2)
         {
             char[] str1Arr = str1.ToCharArray();
             char[] str2Arr = str2.ToCharArray();
@@ -31,11 +31,11 @@ namespace AlgorithmPrograms
             String s2 = new String(str2Arr);
             if (s1.Equals(s2))
             {
-                Console.WriteLine($"{s1} and {s2} are anagrams");
+                return $"{s1} and {s2} are anagrams";
             }
             else
             {
-                Console.WriteLine($"{s1} and {s2} are not anagrams");
+                return $"{s1} and {s2} are not anagrams";
             }
         }
     }
