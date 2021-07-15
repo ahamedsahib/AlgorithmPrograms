@@ -10,8 +10,9 @@ namespace AlgorithmPrograms
             //BinarySearch.SearchWord();
             //InsertionSort.InputArray();
             //BubbleSort.InputArray();
-            MergeSort.InputArray();
-            Anagram.InputString();
+            //MergeSort.InputArray();
+            //Anagram.InputString();
+            PrimeNumberRange.ReadInput();
         }
     }
 }
