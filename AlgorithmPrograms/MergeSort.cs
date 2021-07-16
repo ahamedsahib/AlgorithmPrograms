@@ -1,19 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace AlgorithmPrograms
 {
-    public class MergeSort
+    public class MergeSort<T> where T : IComparable
     {
-        public static void InputArray()
+        List<T> strArr;
+        public MergeSort(List<T> ls)
         {
-            string[] arr = { "pwe", "xyz", "ert", "fds", "asm", "atm" };
-            Console.WriteLine("Array before Sort");
-            printArray(arr);
-            sort(arr, 0, arr.Length - 1);
-            Console.WriteLine("\nSorted array");
-            printArray(arr);
+            this.strArr = ls;
+        }
+        public MergeSort()
+        {
+            Console.WriteLine("Merge Sort");
+        }
+
+        public void MergeSortArray()
+        {
+            int len = strArr.Count;
+            MergeSort<T>.sort(strArr, 0, len - 1);
+            PrintArray(strArr);
         }
         //sort() used to divide the array into halves
-        public static void sort(string[] arr, int l, int r)
+        public static void sort(List<T> arr, int l, int r)
         {
             if (l < r)
             {
@@ -29,7 +38,7 @@ namespace AlgorithmPrograms
                 merge(arr, l, m, r);
             }
         }
-        static void merge(string[] arr, int l, int m, int r)
+        static void merge(List<T> arr, int l, int m, int r)
         {
             // Find sizes of two
             // subarrays to be merged
@@ -37,15 +46,15 @@ namespace AlgorithmPrograms
             int sizeOfSubarray2 = r - m;
 
             // Create temp arrays
-            string[] L = new string[sizeOfSubarray1];
-            string[] R = new string[sizeOfSubarray2];
+            List<T> L = new List<T>(sizeOfSubarray1);
+            List<T> R = new List<T>(sizeOfSubarray2);
+
             int i, j;
 
-            // Copy data to temp arrays
-            for (i = 0; i < sizeOfSubarray1; ++i)
-                L[i] = arr[l + i];
-            for (j = 0; j < sizeOfSubarray2; ++j)
-                R[j] = arr[m + 1 + j];
+            for (i = 0; i < sizeOfSubarray1; i++)
+                L.Add(arr[l + i]);
+            for (j = 0; j < sizeOfSubarray2; j++)
+                R.Add(arr[m + 1 + j]);
 
             // Merge the temp arrays
 
@@ -92,11 +101,12 @@ namespace AlgorithmPrograms
         }
 
         
-        static void printArray(string[] arr)
+        static void PrintArray(List<T> arr)
         {
-            int n = arr.Length;
-            for (int i = 0; i < n; ++i)
-                Console.Write(arr[i] + " ");
+            foreach(var i in arr)
+            {
+                Console.Write($"{i} ");
+            }
             Console.WriteLine();
         }
     }

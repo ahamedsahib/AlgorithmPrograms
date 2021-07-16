@@ -12,7 +12,7 @@ namespace AlgorithmPrograms
             string secondString = Console.ReadLine();
             if(firstString.Length == secondString.Length)
             {
-               FindAnagram(firstString, secondString);
+                Console.WriteLine(FindAnagram(firstString, secondString));
             }
             else
             {

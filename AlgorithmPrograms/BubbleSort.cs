@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace AlgorithmPrograms
 {
-    public class BubbleSort
+    public class BubbleSort<T> where T : IComparable
     {
-        public static void InputArray()
+        public static void InputArray(List<T> inputArray)
         {
-            int[] arr = { 43,25,32,5,13,7,3,20 };
-            int len = arr.Length;
+            List<T> arr = inputArray;
+            int len = arr.Count;
             Console.WriteLine("Before Sorting:\n");
             PrintArray(arr);
             sort(arr, len);
@@ -14,14 +16,14 @@ namespace AlgorithmPrograms
             PrintArray(arr);
         }
 
-        private static void sort(int[] arr, int len)
+        private static void sort(List<T> arr, int len)
         {
-            int temp;
+            T temp;
             for (int i = 0; i < len - 1; i++)
             {
                 for (int j = 0; j < len - i - 1; j++)
                 {
-                    if (arr[j] > arr[j + 1])
+                    if (arr[j].CompareTo( arr[j + 1])>0)
                     {
                         temp = arr[j];
                         arr[j] = arr[j + 1];
@@ -32,10 +34,10 @@ namespace AlgorithmPrograms
             
         }
 
-        public static void PrintArray(int[] arr)
+        public static void PrintArray(List<T> arr)
         {
             Console.Write("[");
-            foreach (int i in arr)
+            foreach (var i in arr)
             {
                 Console.Write($"{i} ");
             }
