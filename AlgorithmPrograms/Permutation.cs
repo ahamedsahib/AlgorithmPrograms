@@ -11,7 +11,7 @@ namespace AlgorithmPrograms
             int start = 0, end = str.Length - 1;
             Console.WriteLine("Using Recursion");
             permutation.PerumuteUsingRecursion(str, start, end);
-            Console.WriteLine("Using Iteration");
+            Console.WriteLine("\nUsing Iteration");
             permutation.PermuteUsingLoop(str, start, end);
         }
 
