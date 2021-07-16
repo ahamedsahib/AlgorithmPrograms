@@ -12,8 +12,9 @@ namespace AlgorithmPrograms
             //BubbleSort.InputArray();
             //MergeSort.InputArray();
             //Anagram.InputString();
-            AnagramPalindromeUsingPrime anagramPalindrome = new AnagramPalindromeUsingPrime();
-            anagramPalindrome.CheckPrimeAnagramAndPalindrome();
+            //AnagramPalindromeUsingPrime anagramPalindrome = new AnagramPalindromeUsingPrime();
+            //anagramPalindrome.CheckPrimeAnagramAndPalindrome();
+            Permutation.ComputePermutation();
         }
     }
 }

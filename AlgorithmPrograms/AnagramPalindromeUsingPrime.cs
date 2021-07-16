@@ -6,7 +6,7 @@ namespace AlgorithmPrograms
     public class AnagramPalindromeUsingPrime
     {
         static List<int> palindromeList = new List<int>();
-        List<int> primeList;
+        static List<int> primeList;
         public  void CheckPrimeAnagramAndPalindrome()
         {
             primeList = PrimeNumberRange.FindPrimeNumber();
