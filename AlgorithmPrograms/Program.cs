@@ -9,7 +9,7 @@ namespace AlgorithmPrograms
         {
             Console.WriteLine("Welcome To Algorithm Programs");
             Console.WriteLine("MENU");
-            Console.WriteLine("1.Permutation\n2.Binary Search\n3.Insertion Sort\n4.Bubble Sort\n5.Merge Sort\n6.Anagram\n7.Prime Within Range\n8.Anagram and palindrome of prime numbers\n9.Exit\nENTER AN OPTION");
+            Console.WriteLine("1.Permutation\n2.Binary Search\n3.Insertion Sort\n4.Bubble Sort\n5.Merge Sort\n6.Anagram\n7.Prime Within Range\n8.Anagram and palindrome of prime numbers\n9.Guessing Number\n10.Regex Custom Message\n11.Exit\nENTER AN OPTION");
             switch (Convert.ToInt32(Console.ReadLine()))
             {
                 case 1:
@@ -47,6 +47,9 @@ namespace AlgorithmPrograms
                     GuessingNumber.GuessNumber();
                     break;
                 case 10:
+                    RegexMessage.CustomRegexMessage();
+                    break;
+                case 11:
                     Console.WriteLine("Exited");
                     break;
             }
