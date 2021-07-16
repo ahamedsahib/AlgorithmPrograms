@@ -14,7 +14,8 @@ namespace AlgorithmPrograms
             //Anagram.InputString();
             //AnagramPalindromeUsingPrime anagramPalindrome = new AnagramPalindromeUsingPrime();
             //anagramPalindrome.CheckPrimeAnagramAndPalindrome();
-            Permutation.ComputePermutation();
+            //Permutation.ComputePermutation();
+            GuessingNumber.GuessNumber();
         }
     }
 }
