@@ -22,7 +22,7 @@ namespace AlgorithmPrograms
 
         public  static void FindNumber(int mid)
         {
-            Console.WriteLine($"Pick One To Find Your Number\n1.If your number is {mid}\n2.Is your number is less than {mid}\n3 your number is greater than {mid}");
+            Console.WriteLine($"Pick One To Find Your Number\n1.Is your number is {mid}\n2.Is your number is less than {mid}\n3.Is your number is greater than {mid}");
             switch (Convert.ToInt32(Console.ReadLine()))
             {
                 case 1:

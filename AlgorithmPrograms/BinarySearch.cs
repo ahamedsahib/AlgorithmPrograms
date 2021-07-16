@@ -4,21 +4,25 @@ using System.IO;
 
 namespace AlgorithmPrograms
 {
-    public class BinarySearch
+    public class BinarySearch<T> where T:IComparable
     {
-        public static void SearchWord()
+        public static void InputWords()
         {
             string file = File.ReadAllText("/Users/Akshal/Projects/AlgorithmPrograms/AlgorithmPrograms/Words.txt");
             List<string> list = new List<string>(file.Split(" "));
+            Console.WriteLine($"The Words in the File\n{file}");
             list.Sort();
+            SearchWord(list);
+        }
+        public static void SearchWord(List<string> list)
+        { 
             int mid;
             int start = 0, end = list.Count - 1;
             int flag = 0;
-            Console.WriteLine($"The Words in the File\n{file}");
             Console.WriteLine("Enter the word you want Search");
             string word = Console.ReadLine();
 
-            while (start <= end)
+             while (start <= end)
             {
                 mid = (start + end) / 2;
                 int result = word.CompareTo(list[mid]);
